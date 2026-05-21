@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKJ-Net // Operational Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-accent">//</span> TKJ-NET <span class="logo-sub">SYS.v11</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">BERANDA</a>
+                <a href="#packages" class="nav-link">PAKET</a>
+                <a href="#order" class="nav-link btn-nav">PESAN SEKARANG</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-glitch-bg"></div>
+        <div class="hero-content">
+            <div class="sys-status"><span class="blink">●</span> SYSTEM STATUS: ONLINE</div>
+            <h1>INTERNET CEPAT & STABIL UNTUK KEBUTUHAN JARINGAN ANDA</h1>
+            <p>Infrastruktur transmisi data berkecepatan tinggi dengan latensi minimum. Dioptimalkan untuk efisiensi dan stabilitas tanpa batas.</p>
+            <a href="#packages" class="btn btn-primary">CEK TRANSMISI</a>
+        </div>
+    </section>
+
+    <section id="packages" class="packages-section">
+        <div class="section-header">
+            <h2>[ AVAILABLE_PACKAGES ]</h2>
+            <div class="line-decoder"></div>
+        </div>
+        
+        <div class="cards-grid">
+            <div class="package-card">
+                <div class="card-tag">BRONZE</div>
+                <h3>10 Mbps</h3>
+                <p class="price">Rp 200.000<span class="per-month">/bln</span></p>
+                <ul class="features">
+                    <li>✓ Bandwidth Asimetris</li>
+                    <li>✓ Kuota Tanpa Batas (FUP)</li>
+                    <li>✓ Ideal untuk 1-3 Perangkat</li>
+                </ul>
+            </div>
+            <div class="package-card featured">
+                <div class="card-tag">SILVER</div>
+                <h3>20 Mbps</h3>
+                <p class="price">Rp 350.000<span class="per-month">/bln</span></p>
+                <ul class="features">
+                    <li>✓ Bandwidth Simetris 1:1</li>
+                    <li>✓ IP Dinamis Standar</li>
+                    <li>✓ Ideal untuk 4-7 Perangkat</li>
+                </ul>
+            </div>
+            <div class="package-card">
+                <div class="card-tag">GOLD</div>
+                <h3>50 Mbps</h3>
+                <p class="price">Rp 600.000<span class="per-month">/bln</span></p>
+                <ul class="features">
+                    <li>✓ Prioritas Jalur Jaringan</li>
+                    <li>✓ IP Publik / Dedicated</li>
+                    <li>✓ Ideal untuk > 8 Perangkat</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>PROTOKOL PEMESANAN LAYANAN</h2>
+                <p>Silakan lengkapi formulir pendaftaran pemasangan WiFi baru di bawah ini.</p>
+            </div>
+            
+            <form id="wifiForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="nama">NAMA LENGKAP</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama sesuai identitas resmi" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">ALAMAT PEMASANGAN</label>
+                    <textarea id="alamat" rows="4" placeholder="Alamat lengkap, nomor rumah, RT/RW, dan koordinat jika ada" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="paket">PILIHAN PAKET INTERNET</label>
+                    <div class="select-wrapper">
+                        <select id="paket" required>
+                            <option value="" disabled selected>-- Pilih Paket Koneksi --</option>
+                            <option value="200000">Paket Bronze 10 Mbps - Rp 200.000</option>
+                            <option value="350000">Paket Silver 20 Mbps - Rp 350.000</option>
+                            <option value="600000">Paket Gold 50 Mbps - Rp 600.000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cost-display-box">
+                    <div class="cost-line"><span>Biaya Bulanan Paket:</span> <span id="pricePackage">Rp 0</span></div>
+                    <div class="cost-line"><span>Biaya Instalasi Fisik:</span> <span id="priceInstallation">Rp 0</span></div>
+                    <hr class="form-divider">
+                    <div class="cost-line total"><span>TOTAL ESTIMASI:</span> <span id="totalHarga">Rp 0</span></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="btnHitung" class="btn btn-secondary">HITUNG TOTAL HARGA</button>
+                    <button type="submit" id="btnKirim" class="btn btn-primary">KIRIM PESANAN</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 TKJ-NET // ENDFIELD OPERATIONAL SYSTEM. ALL RIGHTS RESERVED.</p>
+            <p class="footer-contact">CONTACT: SUPPORT@TKJ.NET | SECURE-LINE: 0811-XXXX-XXXX</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
